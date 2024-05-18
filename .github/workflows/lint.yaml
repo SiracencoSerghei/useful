@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.9', '3.10', '3.11', '3.12'] # Always include the latest python version
+        python-version: ['3.12'] # Always include the latest python version
     steps:
       - name: Checkout
         uses: actions/checkout@v4
