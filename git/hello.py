@@ -1,1 +1,6 @@
-print("Hello World!")
+
+def hello():
+    """
+    The `hello()` function in Python prints "Hello World!" to the console.
+    """
+    print("Hello World!")
