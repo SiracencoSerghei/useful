@@ -8,7 +8,7 @@ The advanced Git commands along with their descriptions and example usage:
   git stash
   git stash apply
   git stash pop
-    
+
 - **Description**: Temporarily saves changes that are not ready to be committed, allowing you to work on something else. apply reapplies the changes without removing them from the stash. pop reapplies and removes the changes from the stash.
 
 ## 2. `git cherry-pick`
@@ -130,4 +130,3 @@ The advanced Git commands along with their descriptions and example usage:
     git tag -a <tagname> -m "message"
 
 - **Description**: Creates tags for commits, useful for marking release points (e.g., v1.0).
-

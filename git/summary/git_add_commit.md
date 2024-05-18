@@ -142,7 +142,7 @@ Here's a basic example of using git commit:
 ```
 
 git add <file1> <file2>  # Stage the changes you want to commit
-``` 
+```
 ```
 git commit   # Open a text editor to enter a commit message
 ```
@@ -172,4 +172,4 @@ Committing changes regularly and providing clear, descriptive commit messages is
 
  create mode 100644 git/summary/git_status.md
 
-(base) ➜  useful git:(main) 
+(base) ➜  useful git:(main)

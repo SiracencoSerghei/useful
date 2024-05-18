@@ -13,7 +13,7 @@ Usage
 Basic Usage
 
 
-- **Output**: 
+- **Output**:
         Untracked files: Files in the working directory that are not being tracked by Git.
         Changes not staged for commit: Files that have been modified but not yet added to the staging area.
         Changes to be committed: Files that have been added to the staging area and are ready to be committed.

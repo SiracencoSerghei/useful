@@ -85,15 +85,15 @@ git status
     git config --global user.name "Your Name"
     git config --global user.email "your.email@example.com"
 
-####  Add a remote: 
+####  Add a remote:
 git remote add origin https://github.com/YourUsername/your-repo.git
-#### Check status: 
+#### Check status:
 git status
-#### Stage changes: 
+#### Stage changes:
 git add <file> or git add .
-#### Commit changes: 
+#### Commit changes:
 git commit -m "Your commit message"
-#### Push changes: 
+#### Push changes:
 git push -u origin master
 
 This should cover the basics to get you started with Git. As you become more familiar with Git, you can explore more advanced features and commands.

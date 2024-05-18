@@ -39,7 +39,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Flake8
         run: |
-          flake8 --ignore=E203,E501,W291,F821,F401 $(git ls-files '*.py')    
+          flake8 --ignore=E203,E501,W291,F821,F401 $(git ls-files '*.py')
           nbqa flake8 --ignore=E203,E501,W291,F821,F401 $(git ls-files '*.ipynb')
       - name: Pylint
         run: |
@@ -60,7 +60,7 @@ jobs:
       - name: pyupgrade
         run: |
           pyupgrade $(git ls-files '*.py')
-          nbqa pyupgrade $(git ls-files '*.ipynb')    
+          nbqa pyupgrade $(git ls-files '*.ipynb')
   prettier:
     timeout-minutes: 1
     runs-on: ubuntu-latest
