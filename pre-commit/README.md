@@ -8,6 +8,9 @@ If you want your code in Github to be at the senior python developer level, then
 2) Execute commands in the terminal
 pip install pre-commit
 pre-commit install
+
+[//]: # (pre-commit run trailing-whitespace --all-files)
+
 pre-commit run --all-files
 
 Welcome to commercial development
