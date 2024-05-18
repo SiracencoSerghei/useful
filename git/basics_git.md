@@ -1,4 +1,4 @@
-## Summarized guide for getting started with Git:
+## Summarized guide for getting started with Git :
 ### 1. Install Git
 
 First, ensure that Git is installed on your system. You can download it from git-scm.com.
