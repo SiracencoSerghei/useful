@@ -153,3 +153,23 @@ git commit -m "Your commit message here"
 ```
 
 Committing changes regularly and providing clear, descriptive commit messages is essential for maintaining a well-documented and understandable project history. It helps you and others understand the evolution of the codebase over time.
+
+### output:
+
+(base) ➜  useful git:(main) ✗ git commit -m "add and commit"
+
+[main b66872c] add and commit
+
+ 5 files changed, 472 insertions(+)
+
+ create mode 100644 git/basics_git.md
+
+ create mode 100644 git/frequents_git.md
+
+ create mode 100644 git/git_advanced.md
+
+ create mode 100644 git/summary/git_add_commit.md
+
+ create mode 100644 git/summary/git_status.md
+
+(base) ➜  useful git:(main) 
