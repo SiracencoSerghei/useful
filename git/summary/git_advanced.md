@@ -89,6 +89,9 @@ The advanced Git commands along with their descriptions and example usage:
 
 - **Description**: Shows the commit logs. Options like --oneline, --graph, and --stat enhance the display.
 
+- **Example:**
+-     git log --topo-order --all --graph --date=local --pretty=format:'%C(green)%h%C(reset) %><(55,trunc)%s%C(red)%d%C(reset) %C(blue)[%an]%C(reset) %C(yellow)%ad%C(reset)%n'
+-
 ## 9. `git submodule`
  - **Command**:
 

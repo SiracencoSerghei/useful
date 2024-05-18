@@ -1,0 +1,9 @@
+[user]
+        name = Siracenco Serghei
+        email = siracencoserghei@email.com
+[alias]
+    lg = log --topo-order --all --graph --date=local --pretty=format:'%C(green)%h%C(reset) %><(55,trunc)%s%C(red)%d%C(reset) %C(blue)[%an]%C(reset) %C(yellow)%ad%C(reset)%n'
+
+# add this to your .gitconfig on your computer. This file is usually found at ~/.gitconfig.
+# Now you can run
+# $ git lg
