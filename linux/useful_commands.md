@@ -88,9 +88,92 @@ chown user:group file.txt
 ```
 
 ### - **ln** - Create hard and symbolic links.
+<u>**Hard Links**</u>
+
+  **Definition:** 
+  
+  A hard link is a direct reference to the physical data on the disk. Multiple hard links to a file act as additional directory entries for that file.
+
+  **Creation:**    
+  Use the ln command without any options.
 ```
-ln -s /path/to/file symlink
+ln original_file hard_link
 ```
+
+Properties:
+
+  ***Same Inode:*** Hard links share the same inode number as the original file. This means they point to the same data blocks on the disk.
+
+  ***File Content:*** Deleting the original file does not affect the hard link. The data remains accessible through the hard link.
+  
+  ***Limitations:***
+        Cannot span across different file systems.
+        Cannot link to directories (to avoid filesystem corruption).
+
+Example:
+```
+touch original_file
+ln original_file hard_link
+ls -li
+```
+Output (example):
+
+```
+
+    1234567 -rw-r--r-- 2 user group 0 May 21 12:34 original_file
+    1234567 -rw-r--r-- 2 user group 0 May 21 12:34 hard_link
+
+```
+<u>**Soft (Symbolic) Links**</u>
+
+  ***Definition:*** A soft link (or symbolic link) is a special file that contains a path to another file or directory. It acts as a shortcut.
+
+  ***Creation:*** Use the ln command with the -s option.
+
+
+```
+ln -s original_file soft_link
+
+```
+Properties:
+
+  ***Different Inode:*** Soft links have a different inode number from the original file. They do not point directly to the data but 
+  
+  ***File Content***: If the original file is deleted, the soft link becomes a dangling link (broken link) pointing to a non-existent file.
+  
+  ***Flexibility:***
+        Can span across different file systems.
+        Can link to directories.
+
+Example:
+
+
+```
+touch original_file
+ln -s original_file soft_link
+ls -li
+
+```
+Output (example):
+
+
+    1234567 -rw-r--r-- 1 user group 0 May 21 12:34 original_file
+    2345678 lrwxrwxrwx 1 user group 14 May 21 12:34 soft_link -> original_file
+
+**Key Differences**
+
+
+Feature	Hard Link	Soft Link
+Inode	Same as the original file	Different from the original file
+Points to	Physical data on disk	Filename (path)
+Across File Systems	No	Yes
+Directories	No	Yes
+Original File Deleted	Data remains accessible	Becomes a broken link
+Use Cases
+
+  **Hard Links:** Useful when you need multiple directory entries for a file within the same file system, allowing file sharing without duplicating data.
+  
+  **Soft Links:** Useful for creating shortcuts, linking files across different file systems, and linking to directories.
 
 ### - **cat** - Concatenate and display file content.
 ```
@@ -109,6 +192,8 @@ less file.txt
 
 
 The **`-n`** option in the <span style="color:red">**head** or **tail**</span> command specifies **`the number of lines to be displayed`** from the beggining or the end of the file. By default, head or tail displays the last 10 lines of a file. Using the **`-n`** option allows you to specify a different number of lines.
+
+When you use head or tail **`-f`**, it allows you to monitor a file in real time as it is being updated.
 
 ### - **head** - Display the beginning of a file.
 
@@ -129,6 +214,11 @@ tail -n 5 file.txt
 ```
 grep "pattern" file.txt
 ```
+or can pipe from... ex.: `cat large-file.txt | grep justo`  # will show the ALL lines with "justo" text...
+or `ls -l | grep ^l` # will show only line that begins with "l"...
+or `ls -l | grep -v ^l` # will show the ALL lines without "l" text...
+or `ls -l | grep st$`  # will show the ALL "st" in the end...
+
 
 ### - **find** - Search for files and directories.
 ```
