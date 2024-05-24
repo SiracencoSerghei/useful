@@ -58,23 +58,14 @@ mv oldname.txt newname.txt
 ```
 rm file.txt
 ```
-**examples:**
 
-To keep only the .txt and/or .pdf files in the current directory, you can use the rm command with a wildcard to remove all files that do not have these extensions. Here's how you can do it:
-
-```
-rm \*[^.txt]\*[^.pdf]
-```
-
-This command uses shell globbing to match all files that do not have .txt or .pdf as their extension. The [^.txt] and [^.pdf] inside the brackets [] are negated character classes, which match any character except the ones specified.
-
-<span style="color:red">Please be careful with this command, as it will delete all files</span> that do not have .txt or .pdf extensions. 
+<span style="color:red">Please be careful with this command, as it can delete all files.</span> 
 
 <u style="color:red">If you want to test the command without actually deleting files, you can use the echo command first:</u>
 ```
-echo rm *[^.txt]*[^.pdf]
+echo rm file.txt
 ```
-This will print the list of files that would be deleted without actually deleting them. If the output looks correct, you can then run the rm command without echo to perform the deletion.
+<u style="color:blue">This will print the list of files that would be deleted without actually deleting them. If the output looks correct, you can then run the rm command without echo to perform the deletion.</u>
 
 Remember, always double-check your commands when using rm to avoid accidentally deleting important files.
 
