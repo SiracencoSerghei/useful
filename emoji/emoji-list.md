@@ -1,8 +1,11 @@
 # emoji-list
 emoji list
 
-Table of Contents
+Table of Contents 😊
 -----------------
+For example, you can use emojis like 💻 (laptop), 🖥️ (desktop computer), ⌨️ (keyboard), 📱 (mobile phone), or 🚀 (rocket) to symbolize technology and coding in general. If you want to be more specific to web development, you might use 🌐 (globe with meridians) to represent the internet or web technologies.
+ 
+ can copy also from: https://emojipedia.org/
 
 - [People](#people)
 - [Nature](#nature)
